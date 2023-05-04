@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,7 @@ namespace POO_EJER4
 {
     class Vehiculo
     {
-        int id;
+      
         string marca;
         string modelo;
         int km;
@@ -103,7 +103,7 @@ namespace POO_EJER4
         }
         public override string ToString()
         {
-            return "Modelo: " + Modelo + "\n " + "Marca: " + Marca + "\n" + "Kilometraje: " + Km + "\n" + " Precio: " + CalPrecio() + "Año: " + Annio;
+            return "Modelo: " + Modelo + "\n " + "Marca: " + Marca + "\n" + "Kilometraje: " + Km + "\n" + " Precio: " + CalPrecio()+"\n"+" Año: " + Annio;
         }
 
     }
@@ -112,11 +112,16 @@ namespace POO_EJER4
         static void Main(string[] args)
         {
             Vehiculo veh = new Vehiculo("Toyota ", " Corola", 5000, 12000, 2017);
+            Console.WriteLine("Vehiculo: "+veh);
+            Console.WriteLine("------");
             Auto auto = new Auto("Ford", " Mustang", 3000, 20000, 2019, true);
+            Console.WriteLine("Auto: "+auto);
+            Console.WriteLine("------");
             Moto moto = new Moto("Yamaha", " YZF-R6", 2000, 50000, 2022, false);
+            Console.WriteLine("Moto: "+moto);
 
 
-
+            Console.ReadKey();
         }
     }
 }
